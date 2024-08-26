@@ -1,0 +1,161 @@
+  /* Obtenemos el codigo de insercion desde google fonts (fuentes de google) y lo pegamos. En este caso ya se habia echo con el primer codigo que
+  es Krona-one, pero el segundo enlace de codigo ya lo incluye (family=Krona+One&family=Montserrat:) sino serian en este caso 2 enlaces distintos*/  
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* notas: */
+
+:root{
+  --color-primario:#0f0f0f;
+  --color-secundario:#f6f6f6;
+  --color-terciario:#22d4f4;
+
+  --fuente-montserrat: 'Montserrat', sans serif;
+  --fuente-krona: 'Krona One', sans serif;
+    
+    /*  El proceso de cambiar los colores en todo el código para asignar en su lugar la variable es ctrl + D. Simplemente 
+        selecciona lo que deseas cambiar con el mouse y luego haz clic en ctrl + D hasta que todos los valores que deseas 
+        cambiar estén seleccionados. Esto te permitirá cambiar simultáneamente todos los valores siguientes que sean iguales 
+        a lo que seleccionaste con el mouse.
+
+        background-color: var(--color-primario); lo utilizamos para cambiar el color que se comparte en varias clases 
+        font-family: var(--fuente-montserrat); y lo mismo para el tipo de letra
+    */
+
+}
+
+
+*{ /* Reset CSS que nos ayuda a no tener problemas con diferentes navegadores*/
+    padding:0;
+    margin: 0;
+}
+
+body{
+    background-color:#0f0f0f; /*Color de fondo*/
+    color:#faf3f3; /* Color del texto*/
+    /*height: 100vh; /* Altura (100% viewport, height) que ocupe el 100% de la pantalla */ 
+    box-sizing: border-box; /*Para determinar caja padre y caja hijo, para que los elementos se queden en el body */
+     
+}
+
+.header{
+    padding: 2% 0% 0% 15%; /* top, derecha, parte de abajo del header, izquierda */
+
+}
+
+.header__menu{
+    display: flex; /* Activar flexbox alinear horizontal */
+    gap: 80px; /* Separacion entre botones */
+}
+
+.header__menu__link{
+    font-family: 'Montserrat', sans serif;
+    font-size: 1.5rem; /* Para poder cambiar de pixels (px) por adaptabilidad de PC a Telefono. 8px = 0.5rem
+    font-weight: 600;
+    color: #22d4fd;
+    padding: 27px;
+    text-decoration: none;
+}
+
+strong{
+    color:hsl(84, 82%, 51%); /* Color del texto*/
+}
+
+
+.presentacion{ /*Flex-box nos ayuda a alinear, centrar, en colomnas, en filas, etc*/
+    display: flex; /* Para alinear el contenido*/
+    align-items: center; /* Para centrar en altura el contenido   https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-display   */
+    /*margin: 10% 15%; /* Margen de ancho de todos los lados de la pantalla*/
+    padding: 6% 15%; /* Ancho y altura */
+    justify-content: space-between;   /*    https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-display     */
+    gap: 82px;  /* Para lograr una separacion entre el texto y la imagen */
+}
+
+.presentacion__contenido{
+    width:50%;  /* Es la anchura de contenido de  class="presentacion_contenido"   como si metieramos el texto en una caja y 
+    determinamos con el tamaño que tan ancha para que se acomode el texto. 
+    para adaptabilidad de PC o Telefono se cambia a porcentaje (%) */
+    display: flex;  /* Activa la funcion Flex-box */
+    flex-direction: column; /* Para ejecutar la funcion de texto en columna */
+    gap: 40px; /* Para crear una separacion entre los elementos, por ejemplo entre textos o botones, etc. */
+}
+
+.presentacion__contenido__titulo{
+    font-size: 2.25rem;  /* font-size es para cambiar el tamaña de la letra */
+    font-family: "Krona One", sans-serif;  /* En este caso "Krona-one" sale del ejemplo de letra que nos proporciona el figma (chica de fondo gris)  
+    font-family: "Krona One", sans-serif;    Es proporcionado por el mismo "Google Fonts"  */
+    
+}
+
+.titulo-destaque{ /*  .titulo-destaque    es ejemplo de como se manda a llamar la clase para poder asignar color o negrita, etc*/
+    color:#fafafb;
+}
+
+.presentacion__contenido__texto{
+    font-family: "Montserrat", sans-serif;  /* En este caso "Montserrat" sale del ejemplo de letra que nos proporciona el figma (chica de fondo gris) */
+    /*   font-family: "Montserrat", sans-serif;    Es proporcionado por el mismo "Google Fonts"  */
+    font-size: 1.5rem;  /* font-size es para cambiar el tamaña de la letra */
+    /*display: flex;
+    justify-content: center;
+    gap: 10px; */
+}
+
+.presentacion__enlaces{
+    display: flex;  
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;  /* alineacion de los articulos (alinear los botones) */
+    gap: 32px;  /*Para dar espacio entre cada cuadrado o botones */
+}
+
+.presentacion__enlaces__subtitulo{
+    font-family:'Krona One', sans serif;  /* Que es como viene el codigo de la fuente */
+    font-size: 1.5rem;
+    font-weight: 400;  /* Con esto se asigna el tipo de fuente (letra) */
+}
+
+.presentacion__enlaces__link{ 
+   
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 600;
+    width: 50%;  /* Anchura del texto ( como si estuviera en una caja.
+        para adaptabilidad de PC o Telefono se cambia a porcentaje (%) los botónes  */
+    background-color: #040404;  /* Color de fondo */ 
+    text-align: center;  /* Alineacion del texto: al centro */ 
+    font-size: 1.5rem;
+    height: 5vh; 
+    border-radius: 8px;
+    padding: 21.5px 0;  /* añade un espacio interno alrededor del contenido. Arriba y Abajo: 10px de espacio interno. Izquierda y Derecha: 20px de espacio interno */
+    box-shadow: 0 15px 8px rgb(251, 252, 251);   /*sombreado de botones */
+    text-decoration: none;  /* Para subrayar y quitar */
+    color: #fbfbfb; 
+    border: 5px solid #040404;  /* Se asignan las caracteristicas del borde, (ancho del borde. Si es punteado o solido. Color) */
+    display: flex;
+    justify-content: center; 
+    gap: 20px;  /* Para dar un espacio entre el icono y las palabras */
+} 
+
+.presentacion__enlaces__link:hover{  /* Agregamos nuestra clase + :hover y llaves {} */
+    background-color: #4f0cec;  /* Sombreado de fondo cuando pasa el mouse sobre el */
+    border: 10px solid #e5f903;  /* Crea un borde en botón, un ancho y el color */  
+    cursor: pointer;  /* Para cambiar el diseño del mouse cuando pasa sobre el botón */
+    
+}
+
+.presentacion__imagen{
+    width: 50%; /* Esto para marcar el tamaño de la imagen relativo a la adaptabilidad
+    de la pantalla (PC o Telefono) respecto al tamaño del tamaño padre (main) */
+}
+
+.footer{
+    background-color: rgb(103, 179, 103);
+    padding: 24px; /* Espaciado arriba y abajo */
+    color: #050505;
+    text-align: center; /* Alinear texto */
+    font-family: 'Monserrat', sans serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    
+}
+
+
